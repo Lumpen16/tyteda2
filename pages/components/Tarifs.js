@@ -1,15 +1,15 @@
-
+import styles from './Tarifs.module.css'
 
 function Tarifs() {
     return (
         <div>
-            <h1>
+            <h1 className={ styles.tarifs_header }>
                 Выберите свой комплекс питания
             </h1>
-            <div>
-                <div>Завтрак</div>
-                <div>Обед</div>
-                <div>Ужин</div>
+            <div className={ styles.tarifs_toggler }>
+                <div className={ styles.tarifs_toggler_item_active }>Завтрак</div>
+                <div className={ styles.tarifs_toggler_item }>Обед</div>
+                <div className={ styles.tarifs_toggler_item }>Ужин</div>
             </div>
             <div>
                 <div>

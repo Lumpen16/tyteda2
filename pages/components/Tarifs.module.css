@@ -1,0 +1,32 @@
+
+
+.tarifs_header {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.tarifs_toggler {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tarifs_toggler_item {
+    padding: 20px;
+    background: #f4fcf9;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Nickelodeon, sans-serif;
+}
+
+.tarifs_toggler_item_active {
+    background: rgb(168, 152, 152);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Nickelodeon, sans-serif;
+}

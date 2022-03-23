@@ -4,7 +4,11 @@
     grid-template-columns: 1fr 2fr 1.5fr;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3)
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background: #fff;
 }
 
 .nav_logo {
@@ -35,10 +39,12 @@
 
 .nav_phone {
     font-size: 16px;
+    cursor: pointer;
 }
 
 .nav_client {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .nav_btn {
@@ -52,4 +58,10 @@
     padding: 10px 40px;
     width: 230px;
     height: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_btn:hover {
+    background: #11d028;
+    color: #fff;
 }

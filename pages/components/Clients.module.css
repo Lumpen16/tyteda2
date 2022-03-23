@@ -1,0 +1,15 @@
+
+.clients_container {
+    border-radius: 8px;
+    margin-top: 40px;
+    padding: 80px;
+}
+
+.clients_header {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 29px;
+    font-family: Nickelodeon, sans-serif;
+    color: #F2B058;
+    margin-bottom: 20px;
+}

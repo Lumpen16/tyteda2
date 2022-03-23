@@ -1,0 +1,20 @@
+
+
+.corp_container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.corp_sub_container {
+    width: 70%;
+    margin-left: auto;
+}
+
+.corp_header {
+    font-family: Nickelodeon, sans-serif;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 1.2;
+    word-break: break-word;
+}
+

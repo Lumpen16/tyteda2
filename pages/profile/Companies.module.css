@@ -1,0 +1,75 @@
+
+
+.companies_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.companies_search_bar {
+    background: #f4f4f4;
+    border-radius: 9px;
+    display: flex;
+    width: 506px;
+    margin: 0 auto 37px;
+    align-items: center;
+    font-size: 24px;
+}
+
+.companies_search_bar_input {
+    font-size: 24px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+}
+
+.companies_companies {
+    width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.companies_companies {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.companies_card {
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 13px;
+    background-color: #fff;
+    transition: box-shadow, transform 0.3s ease 0s;
+}
+
+.companies_card:hover {
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.35);
+    transform: translate(0, -10px);
+}
+
+.companies_button {
+    background: #484848;
+    border-radius: 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    padding: 5px 25px;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.companies_button:hover {
+    border: 1px solid #484848;
+    background: #CACACA;
+    color: #484848;
+}
+
+.companies_img {
+    width: 300px;
+    height: 100px;
+}

@@ -15,7 +15,8 @@
 
 .breaktime_master_container {
     border-radius: 8px;
-    margin-top: 40px;
+    margin: 40px;
+    position: relative;
     padding: 80px;
     overflow: hidden;
     background: linear-gradient(96deg, rgba(216, 24, 24, 0.23) -1.7%, rgba(50, 33, 33, 0.41) 45.69%, rgba(0, 0, 0, 0.96) 65.56%, #010101 100.19%), #000000
@@ -36,4 +37,10 @@
     margin-top: 40px;
     padding: 26px 80px;
     cursor: pointer;
+}
+
+.breaktime_img {
+    position: absolute;
+    right: 10%;
+    top: -20%;
 }

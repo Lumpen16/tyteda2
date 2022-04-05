@@ -8,6 +8,7 @@ function BreakTime() {
                 <h3 className={ styles.breaktime_header3 }>Бесплатная дегустация перед заключением договора</h3>
                 <button className={ styles.breaktime_button}>Заказать</button>
             </div>
+            <img className={ styles.breaktime_img} src='./cup-of-coffee.png'/>
         </div>
     )
 }

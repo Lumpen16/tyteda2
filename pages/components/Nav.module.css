@@ -9,6 +9,8 @@
     top: 0;
     left: 0;
     background: #fff;
+    height: 58px;
+    z-index: 10;
 }
 
 .nav_logo {
@@ -40,6 +42,7 @@
 .nav_phone {
     font-size: 16px;
     cursor: pointer;
+    margin: 0;
 }
 
 .nav_client {
@@ -59,9 +62,22 @@
     width: 230px;
     height: 40px;
     transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
 .nav_btn:hover {
     background: #11d028;
     color: #fff;
+}
+
+
+.nav_anchor {
+    text-decoration: none;
+    color: black;
+
+}
+
+.nav_anchor:hover {
+    color: black;
 }

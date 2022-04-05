@@ -15,7 +15,7 @@ import  Drinks  from './components/Drinks'
 import  BreakTime  from './components/BreakTime'
 import  Trusted  from './components/Trusted'
 import  Delivery  from './components/Delivery'
-import  Clients  from './components/Reviews'
+import  Clients  from './components/Clients'
 import  Footer  from './components/Footer'
 import  Reviews  from './components/Reviews'
 
@@ -44,8 +44,9 @@ export default function Home() {
       <Trusted />
       <Delivery />
       <Clients />
-      <Footer />
       <Reviews />
+      <Footer />
+      
       
         
         {/* <CorpOutsource /> */}

@@ -4,7 +4,13 @@
     max-width: 1100px;
     margin: 0 auto;
 }
-
+.corp_master_container {
+    background-color: #fff;
+    margin: 40px;
+    border-radius: 8px;
+    padding: 80px;
+    position: relative;
+}
 .corp_sub_container {
     width: 70%;
     margin-left: auto;
@@ -16,5 +22,14 @@
     font-weight: 400;
     line-height: 1.2;
     word-break: break-word;
+}
+
+.corp_outflow {
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+
 }
 

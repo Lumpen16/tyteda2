@@ -1,0 +1,37 @@
+
+.user_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.user_subcontainer {
+    display: flex;
+    width: 300px;
+    gap: 40px;
+}
+
+.user_header {
+    font-family: Nickelodeon, sans-serif;
+    font-size: 32px;
+    color: #484848;
+    display: flex;
+    align-items: center;
+}
+
+.user_tomorrow_header {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.user_tomorrow_subheader {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 86.52%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #484848;
+}

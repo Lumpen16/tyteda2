@@ -1,0 +1,34 @@
+
+
+.form {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 0 #484848;
+}
+
+.form > * {
+    display: block;
+}
+
+.form_input {
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #CACACA;
+    outline: none;
+    border: none;
+    padding: 4px 10px;
+    width: 100%;
+}
+
+.form_button {
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease 0s;
+    padding: 6px 10px;
+    width: 100%;
+    background: #CACACA;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+}

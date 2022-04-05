@@ -3,7 +3,7 @@ import styles from './Delivery.module.css'
 function Delivery() {
     return (
         <div className={ styles.delivery_container }>
-            <div className={ styles.delivery_subcontainer }>
+            <div style={{ marginRight: "20px"}} className={ styles.delivery_subcontainer }>
                 <h1 className={ styles.delivery_header }>Оплата и доставка</h1>
                 <ul>
                     <li className={ styles.delivery_list_item }>Оплата наличным и безналичным способом</li>
@@ -12,7 +12,7 @@ function Delivery() {
                     <li className={ styles.delivery_list_item }>Время доставки от 60 минут</li>
                 </ul>
             </div>
-            <div className={ styles.delivery_subcontainer }>
+            <div style={{ marginLeft: "20px"}} className={ styles.delivery_subcontainer }>
                 <h1 className={ styles.delivery_header }>Упаковка товара</h1>
                 <ul>
                     <li className={ styles.delivery_list_item }>Используемая упаковка и посуда<br /> сертифицирована РСТ (Ростестом). </li>

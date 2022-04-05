@@ -1,0 +1,22 @@
+
+.reviews_container {
+    padding: 80px;
+    margin: 40px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.reviews_card {
+    width: 970px;
+    padding: 60px 150px 150px 150px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    font-size: 26px;
+    margin: 30px 65px 90px 65px;
+    color: #181725;
+    margin: 0 auto;
+}
+
+.reviews_header {
+    text-align: center;
+}

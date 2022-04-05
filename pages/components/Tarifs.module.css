@@ -1,5 +1,12 @@
 
 
+.tarifs_container {
+    margin: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 80px;
+}
+
 .tarifs_header {
     max-width: 1100px;
     margin: 0 auto;

@@ -1,25 +1,43 @@
 
 .hero_container {
-    max-width: 800px;
+    max-width: 830px;
     margin: 100px auto;
     padding: 0 10px;
+    padding-top: 68px;
+    backdrop-filter: blur(6px);
+    border-radius: 20%;
+    /* background-color: #fff; */
+}
+
+
+.hero_master_container {
+    /* background-color: src('./ludi.jpg'); */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    background: #fff;
 }
 
 .hero_header {
     font-size: 44px;
     font-family: Nickelodeon, sans-serif;
     margin: 0;
+    text-align: center;
+    line-height: 1.2;
 }
 
 .hero_buisiness {
-    font-size: 44px;
+    font-size: 52px;
     font-family: Nickelodeon, sans-serif;
+    color: #11d028;
 }
 
 .hero_list_item {
     font-size: 1.3vw;
     font-family: Nickelodeon, sans-serif;
     list-style-type: none;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
 .hero_list {
@@ -27,6 +45,11 @@
     font-family: Nickelodeon, sans-serif;
 }
 
+.hero_list_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .hero_button {
     margin: 0 auto;
     display: block;
@@ -36,11 +59,14 @@
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    padding: 15px 40px;
+    padding: 20px 60px;
     transition: .3s ease-in-out;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .hero_button:hover {
     background: #06bb1b;
     color: #fff;
 }
+

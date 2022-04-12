@@ -23,6 +23,8 @@ html {
 
 body {
   background: url('../public/background-image.jpg');
+  background-size: 100%;
+  width: 100vw;
 }
 
 @font-face {

@@ -132,7 +132,7 @@ function Tarifs() {
 
     const dinner = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
         <div style={{ display: 'flex', justifyContent: 'center',}}>
             <div style={{ paddingRight: "10px"}}>2 блюда</div>
@@ -145,7 +145,7 @@ function Tarifs() {
         <img src='./RybaOkun.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center' }}>{data[2].mini.bottomMeals.pure}<br/>+<br/>{data[2].mini.bottomMeals.ryba}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Стандарт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>3 блюда</div>
@@ -159,7 +159,7 @@ function Tarifs() {
         <img src='./ZapekankaPashtet.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center'}}>{data[2].standard.bottomMeals.ragu}<br/>+<br/>{data[2].standard.bottomMeals.ryba}<br/>+<br/>{ data[2].standard.bottomMeals.zapekanka}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Комфорт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>4 блюда</div>
@@ -179,7 +179,7 @@ function Tarifs() {
 
     const obed = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
         <div style={{ display: 'flex', justifyContent: 'center',}}>
             <div style={{ paddingRight: "10px"}}>2 блюда</div>
@@ -192,7 +192,7 @@ function Tarifs() {
         <img src='./Harcho.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center' }}>{data[1].mini.bottomMeals.harcho}<br/>+<br/>{data[1].mini.bottomMeals.salat}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Стандарт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>3 блюда</div>
@@ -206,7 +206,7 @@ function Tarifs() {
         <img src='./TefteliRis.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center'}}>{data[1].standard.bottomMeals.salat}<br/>+<br/>{data[1].standard.bottomMeals.kartofel}<br/>+<br/>{ data[1].standard.bottomMeals.kotleta}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Комфорт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>4 блюда</div>
@@ -226,7 +226,7 @@ function Tarifs() {
 
     const zavtraki = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
         <div style={{ display: 'flex', justifyContent: 'center',}}>
             <div style={{ paddingRight: "10px"}}>2 блюда</div>
@@ -239,7 +239,7 @@ function Tarifs() {
         <img src='./MannayaVarenie.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center' }}>{data[0].mini.bottomMeals.kasha}<br/>+<br/>{data[0].mini.bottomMeals.omlet}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Стандарт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>3 блюда</div>
@@ -253,7 +253,7 @@ function Tarifs() {
         <img src='./MannayaOreh.png' style={{ width: "400px", height: "400px"}}/>
         <h1 style={{ fontSize: '16px', textAlign: 'center'}}>{data[0].standard.bottomMeals.kasha}<br/>+<br/>{data[0].standard.bottomMeals.omlet}<br/>+<br/>{ data[0].standard.bottomMeals.zapekanka}</h1>
     </div>
-    <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
+    <div className={ styles.tarifs_card } style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Комфорт -</h1>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
             <div style={{ paddingRight: "10px"}}>4 блюда</div>

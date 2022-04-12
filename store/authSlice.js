@@ -4,7 +4,8 @@ const initialState = {
     authorized: false,
     modal: false,
     adminModal: false,
-    userModal: false
+    userModal: false,
+    reqModal: false
 }
 
 export const authSlice = createSlice({
@@ -25,9 +26,12 @@ export const authSlice = createSlice({
         },
         toggleUserModal: (state) => {
             state.userModal = !state.userModal
+        },
+        toggleReqModal: (state) => {
+            state.reqModal = !state.reqModal
         }
     }
 })
 
-export const { setAuth, setUnauth, toggleModal, toggleAdminModal, toggleUserModal } = authSlice.actions
+export const { setAuth, setUnauth, toggleModal, toggleAdminModal, toggleUserModal, toggleReqModal } = authSlice.actions
 export default authSlice.reducer

@@ -1,7 +1,7 @@
 import styles from './Modal.module.css'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleAdminModal } from '../authSlice'
+import { toggleAdminModal } from '../../store/authSlice'
 import axios from 'axios'
 
 export default function AdminModal({ show }) {
@@ -20,7 +20,7 @@ export default function AdminModal({ show }) {
         let companyID = getIdByName(option)
         companyID = companies.filter( company => company.name === option)[0].id
         console.log(companyID)
-        await axios.post('https://sleepy-crag-49787.herokuapp.com/user/create', {
+        await axios.post('https://api.tyteda.ru/user/create', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('access_token')
             },
@@ -34,7 +34,7 @@ export default function AdminModal({ show }) {
         dispatch(toggleAdminModal())
         
         console.log(companyID)
-        await axios.post(`https://sleepy-crag-49787.herokuapp.com/company/addCreator`, {
+        await axios.post(`https://api.tyteda.ru/company/addCreator`, {
             creator: mAdminID,
             id: companyID
         }).then( res => console.log(res.data))
@@ -50,7 +50,7 @@ export default function AdminModal({ show }) {
     }
 
     async function getCompanies() {
-        const res = await axios.get('https://sleepy-crag-49787.herokuapp.com/company')
+        const res = await axios.get('https://api.tyteda.ru/company')
         setCompanies(res.data.map( company => Object.assign({}, {name: company.name, id: company._id}) ))
     }
 

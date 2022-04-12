@@ -18,9 +18,15 @@ import  Delivery  from './components/Delivery'
 import  Clients  from './components/Clients'
 import  Footer  from './components/Footer'
 import  Reviews  from './components/Reviews'
+import ReqModal from './components/ReqModal'
+import { useSelector } from 'react-redux'
+
 
 
 export default function Home() {
+
+  const isShown = useSelector((state) => state.auth.reqModal)
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -32,6 +38,7 @@ export default function Home() {
       </Head>
 
       <Nav />
+      <ReqModal show={ isShown }/>
       <Hero />
       <CorpOutsource />
       <Pros />

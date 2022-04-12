@@ -1,7 +1,7 @@
 import styles from './Modal.module.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleModal } from '../authSlice'
+import { toggleModal } from '../../store/authSlice'
 import axios from 'axios'
 
 export default function Modal({ show }) {
@@ -27,7 +27,7 @@ export default function Modal({ show }) {
         const formData = new FormData()
         formData.append('name', name)
         formData.append('image', file)
-        axios.post('https://sleepy-crag-49787.herokuapp.com/company/create', formData)
+        axios.post('https://api.tyteda.ru/company/create', formData)
         .then(res => {
             mAdminID = res.data._id
         })

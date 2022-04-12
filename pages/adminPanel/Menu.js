@@ -8,7 +8,7 @@ function MenuItem({img, name, id, limit}) {
     const [deleted, setDeleted] = useState(false)
     async function deleteDish() {
         
-        await axios.get(`https://sleepy-crag-49787.herokuapp.com/dish/delete?id=${id}`)
+        await axios.get(`https://api.tyteda.ru/dish/delete?id=${id}`)
         setDeleted(true)
     }
 
@@ -41,7 +41,7 @@ export default function Menu() {
     }
 
     async function getDishes() {
-        await axios.get('https://sleepy-crag-49787.herokuapp.com/dish')
+        await axios.get('/dish')
         .then(res => setDishes(res.data))
     }
 
@@ -54,7 +54,7 @@ export default function Menu() {
         formData.append('limit', limit)
         formData.append('week', option)
 
-        await axios.post('https://sleepy-crag-49787.herokuapp.com/dish/create', formData)
+        await axios.post('https://api.tyteda.ru/dish/create', formData)
         .then( res => setDishes(dishes.concat([res.data])))
         
         

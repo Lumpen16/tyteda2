@@ -1,7 +1,7 @@
 import styles from './Companies.module.css'
-import CompaniesItem from '../profile/CompaniesItem'
+import CompaniesItem from '../prpage/CompaniesItem'
 import axios from 'axios'
-import { toggleModal, toggleAdminModal } from '../authSlice'
+import { toggleModal, toggleAdminModal } from '../../store/authSlice'
 import { useDispatch } from 'react-redux'
 import { useState, useCallback, useEffect } from 'react'
 
@@ -18,7 +18,7 @@ export default function Companies() {
 
 
     async function fetchCompanies() {
-        companies = await (await fetch('https://sleepy-crag-49787.herokuapp.com/company')).json()
+        companies = await (await fetch('https://api.tyteda.ru/company')).json()
         setBuffer(companies)
         console.log(buffer)
         setList(companies.map( company => <CompaniesItem admin key={ company._id } id={company._id } name={ company.name } img={ company.image } />))
@@ -43,16 +43,18 @@ export default function Companies() {
         
         if (name === "") {
 
-            setList(buffer.map( company => <CompaniesItem admin key={ company._id } id={company._id } name={ company.name } img={ company.image }/>))
+            setList(buffer.map( company => <CompaniesItem admin key={ company._id } id={company._id } name={ company.name } img={ company.image } countUsers={ company.users.length }/>))
         }
         else {
             console.log(name)
-            setList(buffer.filter( (company) => name.includes(company.name)).map( company => <CompaniesItem admin key={ company._id } id={company._id } name={ company.name } img={ company.image } />))
+            setList(buffer.filter( (company) => name.includes(company.name)).map( company => <CompaniesItem admin key={ company._id } id={ company._id } name={ company.name } img={ company.image } countUsers={ company.users.length } />))
         }
     }
 
     return (
         <div className={ styles.companies_container }>
+            <div style={{ fontSize: "48px", color: "#48484a"}}>Список компаний</div>
+            <div style={{ fontSize: "32px", color: "#48484a"}}>Всего компаний: { buffer.length }</div>
             <div className={ styles.companies_button_container}>
                 <button onClick={ () => dispatch(toggleModal())} className={ styles.companies_button }>Добавить компанию +</button>
                 <button onClick={ () => dispatch(toggleAdminModal())}className={ styles.companies_button }>Добавить админа +</button>

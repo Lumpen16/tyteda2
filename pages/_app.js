@@ -1,8 +1,7 @@
 import '../styles/globals.css'
 import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
-import authReducer from './authSlice'
-import modalReducer from './modalSlice'
+import authReducer from '../store/authSlice'
 import { useEffect } from 'react'
 
 

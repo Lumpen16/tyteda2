@@ -4,6 +4,10 @@ const nextConfig = {
   distDir: 'frontend',
   eslint: {
     ignoreDuringBuilds: true
+  },
+  images: {
+    loader: 'akamai',
+    path: ''
   }
 }
 

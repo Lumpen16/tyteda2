@@ -26,9 +26,9 @@ export default function DishesListItem({name, dishes, id}) {
             <h3>{ name }</h3>
             <select onChange={(e) => handleChange(e) } className={ styles.item_select } >
                 <option selected disabled>Не выбрано</option>
-                { dishes.map( dish => <option key={ dish.id }>{ dish.name }</option>)}
+                { dishes?.map( dish => <option key={ dish.id }>{ dish.name }</option>)}
             </select>
-            <div>
+            <div style={{ height: "150px"}}>
                 <img></img>
             </div>
         </div>

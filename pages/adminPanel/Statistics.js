@@ -64,7 +64,7 @@ function CategoriesStats({ orders }) {
 
 
     async function getOrders() {
-        let orders = await axios.get('https://sleepy-crag-49787.herokuapp.com/order').then( res => res.data)
+        let orders = await axios.get('https://api.tyteda.ru/order').then( res => res.data)
         // console.log(ords)
         // checkDate('2022.04.05')
         setOrds(orders.filter( order => checkDate(order.date)))
@@ -171,7 +171,7 @@ export default function Statistics() {
     // }
 
     async function getCompanies() {
-        let comp = await axios.get('https://sleepy-crag-49787.herokuapp.com/company').then( res => res.data )
+        let comp = await axios.get('http://194.58.122.115/company').then( res => res.data )
         setCompanies(comp)
         // console.log(companies)
     }
@@ -179,7 +179,7 @@ export default function Statistics() {
     
 
     async function getOrders() {
-        let ords = await axios.get('https://sleepy-crag-49787.herokuapp.com/order').then( res => res.data)
+        let ords = await axios.get('http://194.58.122.115/order').then( res => res.data)
         // console.log(ords)
         // checkDate('2022.04.05')
         setOrders(ords)

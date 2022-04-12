@@ -55,3 +55,12 @@
     /* display: inline-block; */
     font-size: 42px;
 }
+
+.profile_button {
+    padding: 5px 20px;
+    color: #484848;
+    background: #fff;
+    outline: none;
+    border: 1px solid #48484A;
+    border-radius: 17px;
+}

@@ -8,7 +8,7 @@ export default function Companies() {
     const [buffer, setBuffer] = useState([])
     const [name, setName] = useState('')
     async function fetchCompanies() {
-        companies = await (await fetch('https://sleepy-crag-49787.herokuapp.com/company')).json()
+        companies = await (await fetch('https://api.tyteda.ru/company')).json()
         setList(companies.map( company => <CompaniesItem key={ company._id } id={company._id } name={ company.name } img={ company.image } />))
         setBuffer(companies)
         // console.log(companies)
@@ -43,9 +43,8 @@ export default function Companies() {
 
     return (
         <div className={ styles.companies_container }>
-            <div className={ styles.companies_search_bar}>
                 <input onChange={ (e) => setName(e.target.value) } value={ name } className={ styles.companies_search_bar_input } placeholder='Поиск по названию компании' type='text'></input>
-            </div>
+            
             <div className={ styles.companies_companies }>
                 { list }
             </div>

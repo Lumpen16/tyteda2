@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import outerStyles from '../profile/ProfilePage.module.css'
+import outerStyles from '../prpage/ProfilePage.module.css'
 import Footer from '../components/Footer'
 import DishesList from './dishesList'
 import axios from 'axios'
@@ -16,13 +16,13 @@ export default function UserProfile() {
 
 
     async function getUser() {
-        const { bio } =  await axios.get(`https://sleepy-crag-49787.herokuapp.com/user/getOne?id=${localStorage.getItem('_id')}`).then(res => res.data)
+        const { bio } =  await axios.get(`https://api.tyteda.ru/user/getOne?id=${localStorage.getItem('_id')}`).then(res => res.data)
         setFio(bio)
     }
 
     function checkAuth() {
         if (localStorage.getItem('role') !== 'User') {
-            router.push('/profile')
+            router.push('/profilepage')
         }
     }
 
@@ -38,7 +38,7 @@ export default function UserProfile() {
         localStorage.setItem('access_token', '')
         localStorage.setItem('company_id', '')
         localStorage.setItem('role', '')
-        router.push('/profile')
+        router.push('/profilepage')
     }
 
     const tomorrow = new Date()

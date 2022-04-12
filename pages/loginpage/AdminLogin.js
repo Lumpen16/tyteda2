@@ -2,7 +2,7 @@ import styles from './AdminLogin.module.css'
 import {useRouter} from 'next/router'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setAuth } from '../authSlice'
+import { setAuth } from '../../store/authSlice'
 import axios from 'axios'
 
 
@@ -21,7 +21,7 @@ export default function AdminLogin() {
 
         if ( name && password ) {
             await axios
-            .post( 'https://sleepy-crag-49787.herokuapp.com/login', {
+            .post( 'https://api.tyteda.ru/login', {
                 username: name,
                 password: password
             }).then( (res) => {
@@ -42,7 +42,7 @@ export default function AdminLogin() {
                 // }
             }).catch(error => console.log(error))
 
-            await axios.get( 'https://sleepy-crag-49787.herokuapp.com/profile', {
+            await axios.get( 'https://api.tyteda.ru/profile', {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('access_token')
                 }

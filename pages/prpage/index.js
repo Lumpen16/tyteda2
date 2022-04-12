@@ -5,9 +5,10 @@ import styles from './ProfilePage.module.css'
 import Modal from '../components/Modal'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function ProfilePage() {
-
+    const router = useRouter()
     const isShown = useSelector((state) => state.auth.modal)
 
     useEffect(() => {}, [isShown])
@@ -23,11 +24,15 @@ export default function ProfilePage() {
             
           </Head>
           <div className={ styles.profile_container }>
+            
             <Modal show={ isShown }></Modal>
               <div className={ styles.profile_tyteda_container }>
                   <div className={ styles.profile_tyteda }>TYT<br />EDA</div>
               </div>
               <div className={ styles.profile_header }>Добро Пожаловать!<br/><span className={ styles.profile_tyteda_header }>TYTEDA.СЕРВИС</span></div>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <button className={ styles.profile_button } onClick={ () => router.push('/loginpage')}>Вход для админа</button>
+              </div>
               <h1 className={ styles.profile_subheader }>Выберите вашу компанию</h1>
           </div>
           <div className={ styles.profile_container }>

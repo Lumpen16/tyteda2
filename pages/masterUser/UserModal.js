@@ -1,7 +1,7 @@
 import styles from './UserModal.module.css'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleUserModal } from '../authSlice'
+import { toggleUserModal } from '../../store/authSlice'
 import axios from 'axios' 
 import { useRouter } from 'next/router'
 
@@ -21,7 +21,7 @@ export default function Modal({ show, name }) {
     async function addUserToCompany() {
         if (username && password && fio && subPassword) {
             let userID = ''
-            await axios.post('https://sleepy-crag-49787.herokuapp.com/user/create', {
+            await axios.post('https://api.tyteda.ru/user/create', {
                 username: username,
                 password: password,
                 email: phone,
@@ -32,7 +32,7 @@ export default function Modal({ show, name }) {
                 userID = res.data._id
             })
 
-            await axios.get(`https://sleepy-crag-49787.herokuapp.com/company/addUser?userId=${userID}&id=${localStorage.getItem('company_id')}`)
+            await axios.get(`https://api.tyteda.ru/company/addUser?userId=${userID}&id=${localStorage.getItem('company_id')}`)
         }
         else {
             console.log('lol')

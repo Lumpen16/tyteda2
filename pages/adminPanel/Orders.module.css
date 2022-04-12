@@ -9,7 +9,8 @@
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
+    
 
 }
 
@@ -35,7 +36,7 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .orders_print_button {
@@ -50,6 +51,7 @@
     transition: all .3s ease 0s;
     border: 1px solid #484848;
     color: #484848;
+    width: 100px;
 }
 
 .orders_print_button:hover {
@@ -69,13 +71,17 @@
     border-radius: 20px;
     padding: 0 10px;
     outline: none;
-    border: 1px solid #484848;
+    border: 1px solid #48484A;
+    text-align: center;
 }
 
 .orders_companies {
     height: 28px;
     border-radius: 20px;
     padding-left: 5px;
+    border: 1px solid #48484A;
+    width: 150px;
+    text-align: center;
 }
 
 .orders_choose {
@@ -97,17 +103,21 @@
 .orders_orders {
     padding: 20px;
     min-height: 100px;
-    background-color: #CACACA;
+    /* background-color: #CACACA; */
     border-radius: 13px;
     overflow-y: auto;
     width: 100%;
-    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
 }
 
 .orders_orders_header {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 0px;
+    color: #48484A;
+
 }
 
 .orders_orders_result_header {
@@ -117,4 +127,21 @@
 
 .orders_orders_result_container {
     margin-bottom: 20px;
+    height: 280px;
+    padding: 30px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.orders_positions {
+    margin-bottom: 50px;
+    font-size: 32px;
+    color: #48484A;
+}
+
+.orders_item_header {
+    font-size: 32px;
+    text-decoration: none;
+    font-style: normal;
+    color: #48484A;
 }

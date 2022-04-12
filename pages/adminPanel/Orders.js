@@ -4,13 +4,13 @@ import axios from 'axios'
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 
-import * as htmlToPDFMake from 'html-to-pdfmake'
+import htmlToPDFMake from 'html-to-pdfmake';
 
-
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 
 function createPDF(dishCompany, dishes) {
-    pdfMake.vfs = pdfFonts.pdfMake.vfs;
+    
     let html = htmlToPDFMake(document.getElementById('orders').innerHTML)
     console.log(html)
     const documentDefinition = { content: html }
@@ -103,8 +103,9 @@ function OrdersItem({dishType, dishes, dishCompany}) {
         }, [dishes])
 
     return (
-        <div>
-            <ul>
+        <div style={{ display: dishType === "Напиток" || dishType === "Соус" ? 'flex' : 'block'}}>
+            <h2 className={ styles.orders_item_header }>{ dishType }: { dis.filter( dish => dish.type === dishType).length } </h2>
+            <ul style={{ listStyle: "none", paddingInlineStart: '0'}}>
                 { dis.filter( dish => dish.type === dishType && (dishCompany === 'Все' || dish.company === dishCompany)).map( dish => <li key={Math.random()}>{ dish.name } x { countDishes(dish.name)} </li>)}
             </ul>
         </div>
@@ -129,7 +130,7 @@ export default function Orders() {
 
 
     async function getCompanies() {
-        const res = await axios.get('https://sleepy-crag-49787.herokuapp.com/company')
+        const res = await axios.get('/company')
         setCompanies(res.data.map( company => Object.assign({}, {name: company.name, id: company._id}) ))
     }
 
@@ -201,7 +202,7 @@ export default function Orders() {
     }
 
     async function getOrders() {
-        let orders = await axios.get('https://sleepy-crag-49787.herokuapp.com/order').then( res => res.data)
+        let orders = await axios.get('https://api.tyteda.ru/order').then( res => res.data)
         ords.push(...orders)
         // console.log(orders)
         parseOrders(orders)
@@ -223,11 +224,8 @@ export default function Orders() {
     return (
         <div className={ styles.orders_container }>
             <div className={ styles.orders_header }>
-                <button className={ styles.orders_refresh }>Обновить</button>
-                <div className={ styles.orders_print_container }>
-                    {/* <button className={ styles.orders_print_button }>Поименный</button> */}
-                    <button onClick={ () => createPDF(chosenCompany, dishes) } className={ styles.orders_print_button }>Отчет</button>
-                </div>
+            <div className={ styles.orders_orders_header }>{chosenCompany === 'Все' ? 'Все компании' : chosenCompany}</div>
+                
                 <div className={ styles.orders_date_container }>
                     <input className={ styles.orders_date } type='date' onChange={ e => setDate(e.target.value)} value={ date }></input>
                     <select value={ chosenCompany } onChange={ e => setChosenCompany(e.target.value)}className={ styles.orders_companies }>
@@ -236,12 +234,14 @@ export default function Orders() {
                     </select>
                     <button className={ styles.orders_choose }>Выбрать</button>
                 </div>
+                
             </div>
+            <div className={ styles.orders_positions }>Все позиции: { dishes.length }</div>
             <div id="orders" className={ styles.orders_orders }>
-                <div className={ styles.orders_orders_header }>{chosenCompany === 'Все' ? 'Все компании' : chosenCompany}</div>
+               
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Салаты:
+                <div style={{ background: "#BADBA5"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
                         <div>
                             <OrdersItem dishCompany={ chosenCompany } dishType='Салат' dishes={ dishes }></OrdersItem>
                         </div>
@@ -249,49 +249,60 @@ export default function Orders() {
                     
                 </div>  
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Первое:
+                <div style={{ background: "#DBC5A5"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
                         <div>
                             <OrdersItem dishCompany={ chosenCompany } dishType='Первое' dishes={ dishes }></OrdersItem>
                         </div>
                     </div>
                 </div>
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Гарниры:
+                <div style={{ background: "#B29898"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
                         <div>
                             <OrdersItem dishCompany={ chosenCompany } dishType='Гарнир' dishes={ dishes }></OrdersItem>
+                            </div>
                     </div>
                 </div>
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Второе:
+                <div style={{ background: "#DADBA5"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
                         <div>
                         <OrdersItem dishCompany={ chosenCompany } dishType='Второе' dishes={ dishes }></OrdersItem>
                         </div>
                     </div>
                 </div>
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Соусы:
-                        <div>
-                        <OrdersItem dishCompany={ chosenCompany } dishType='Соус' dishes={ dishes }></OrdersItem>
-                        </div>
-                    </div>
-                </div>
+                
 
-                <div className={ styles.orders_orders_result_container }>
-                    <div className={ styles.orders_orders_result_header }>Напитки:
+                <div  style={{ gridColumn: "1 / 3", width: "100%", height: "", background: "#98ACB2"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
                         <div>
                         <OrdersItem dishCompany={ chosenCompany } dishType='Напиток' dishes={ dishes }></OrdersItem>
                         </div>
                     </div>
                 </div>
 
+                <div style={{ gridColumn: "3 / 5", width: "100%", height: "", background: "#A0B298"}} className={ styles.orders_orders_result_container }>
+                    <div className={ styles.orders_orders_result_header }>
+                        <div>
+                        <OrdersItem dishCompany={ chosenCompany } dishType='Соус' dishes={ dishes }></OrdersItem>
+                        </div>
+                    </div>
+                </div>
+
                 
                 
+            
+                
             </div>
-            </div>
+            <div style={{ display: "flex", justifyContent: 'space-between' }}>
+                    <button className={ styles.orders_refresh }>Обновить</button>
+                        <div className={ styles.orders_print_container }>
+                            {/* <button className={ styles.orders_print_button }>Поименный</button> */}
+                            <button onClick={ () => createPDF(chosenCompany, dishes) } className={ styles.orders_print_button }>Отчет</button>
+                        </div>
+                </div>
             </div>
     )
 }

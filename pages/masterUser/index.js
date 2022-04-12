@@ -1,12 +1,12 @@
 import Head from 'next/head'
-import outerStyles from '../profile/ProfilePage.module.css'
+import outerStyles from '../prpage/ProfilePage.module.css'
 import Footer from '../components/Footer'
 import styles from './MasterUser.module.css'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import UserModal from './UserModal'
-import { toggleUserModal } from '../authSlice'
+import { toggleUserModal } from '../../store/authSlice'
 import { useSelector, useDispatch } from 'react-redux'
 
 
@@ -14,7 +14,7 @@ function UserCard({username, id}) {
     const [deleted, setDeleted] = useState(username === undefined ? true : false)
 
     async function deleteUser() {
-       await axios.get(`https://sleepy-crag-49787.herokuapp.com/user/delete?id=${id}`).then( res => {
+       await axios.get(`https://api.tyteda.ru/user/delete?id=${id}`).then( res => {
            console.log('deleted') 
            setDeleted(true)
        }) 
@@ -38,7 +38,7 @@ export default function MasterUser() {
     useEffect(() => {
         getUsers()
         if (localStorage.getItem('role') !== 'mAdmin') {
-            router.push('/profile')
+            router.push('/profilepage')
             return
         }
         // localStorage.getItem('_id')
@@ -46,7 +46,7 @@ export default function MasterUser() {
 
 
     async function getUsers() {
-        let usersList = await axios.get(`https://sleepy-crag-49787.herokuapp.com/company/getOne?id=${localStorage.getItem('company_id')}`).then( res => res.data.users)
+        let usersList = await axios.get(`https://api.tyteda.ru/company/getOne?id=${localStorage.getItem('company_id')}`).then( res => res.data.users)
         console.log(usersList[0])
         if (!usersList[0]) {
             console.log('lol')
@@ -55,7 +55,7 @@ export default function MasterUser() {
         console.log(usersList)
         const rawUsersList = []
         for (let user of usersList) {
-            rawUsersList.push(await axios.get(`https://sleepy-crag-49787.herokuapp.com/user/getOne?id=${user}`).then( res => res.data ))
+            rawUsersList.push(await axios.get(`https://api.tyteda.ru/user/getOne?id=${user}`).then( res => res.data ))
         }
         setUsers(rawUsersList)
         console.log(users)
@@ -66,7 +66,7 @@ export default function MasterUser() {
         localStorage.setItem('access_token', '')
         localStorage.setItem('company_id', '')
         localStorage.setItem('role', '')
-        router.push('/profile')
+        router.push('/profilepage')
     }
 
     return (

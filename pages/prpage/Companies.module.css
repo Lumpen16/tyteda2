@@ -17,12 +17,19 @@
 }
 
 .companies_search_bar_input {
-    font-size: 24px;
-    width: 100%;
-    background: transparent;
+    margin: 15px 0 25px;
+    border-radius: 17px;
+    max-width: 506px;
+    align-items: center;
+    /* background: #F4F4F4; */
+    padding: 10px;
+    border: 1px solid #48484A;
+    text-align: center;
     outline: none;
-    border: none;
-    padding: 10px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #48484a;
+    width: 100%;    
 }
 
 .companies_companies {
@@ -39,7 +46,8 @@
 }
 
 .companies_card {
-    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+    background: #F9F9FB;
     padding: 20px;
     border-radius: 13px;
     background-color: #fff;
@@ -52,8 +60,8 @@
 }
 
 .companies_button {
-    background: #484848;
-    border-radius: 13px;
+    background: #48484a;
+    border-radius: 17px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -64,9 +72,9 @@
 }
 
 .companies_button:hover {
-    border: 1px solid #484848;
-    background: #CACACA;
-    color: #484848;
+    border: 1px solid #48484a;
+    background: none;
+    color: #48484a;
 }
 
 .companies_img {

@@ -1,7 +1,7 @@
 import styles from './Modal.module.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleModal } from '../authSlice'
+import { toggleModal } from '../../store/authSlice'
 import axios from 'axios' 
 import { useRouter } from 'next/router'
 
@@ -15,14 +15,14 @@ export default function Modal({ show, name }) {
     
     async function authorize() {
         if (username && password) {
-            const companies = await axios.get('https://sleepy-crag-49787.herokuapp.com/company').then( res => res.data)
+            const companies = await axios.get('/company').then( res => res.data)
             // console.log(companies)
-            await axios.post('https://sleepy-crag-49787.herokuapp.com/login', {
+            await axios.post('https://api.tyteda.ru/login', {
                 username: username,
                 password: password
             }).then( res => localStorage.setItem('access_token', res.data.access_token)).catch( error => console.log(error))
 
-            await axios.get('https://sleepy-crag-49787.herokuapp.com/profile', {
+            await axios.get('https://api.tyteda.ru/profile', {
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('access_token')
                 }

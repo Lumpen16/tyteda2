@@ -28,7 +28,7 @@ export default function DishesList() {
     //     return await axios.get(`https://sleepy-crag-49787.herokuapp.com/company/getOne?id=${localStorage.getItem('company_id')}`).then( res => res.data.name)
     // }
     async function createOrder() {
-        const name = await axios.get(`https://sleepy-crag-49787.herokuapp.com/company/getOne?id=${localStorage.getItem('company_id')}`).then( res => res.data.name)
+        const name = await axios.get(`https://api.tyteda.ru/company/getOne?id=${localStorage.getItem('company_id')}`).then( res => res.data.name)
         console.log(name)
         const dishesID = JSON.parse(localStorage.getItem('order')).map( dish => Object.assign({}, {name: dish.name, type: dish.type, company: name}))
 
@@ -38,7 +38,7 @@ export default function DishesList() {
 
 
 
-        axios.post('https://sleepy-crag-49787.herokuapp.com/order/create', {
+        axios.post('https://api.tyteda.ru/order/create', {
             dish: dishesID,
             creator: localStorage.getItem('_id'),
             company: localStorage.getItem('company_id'),
@@ -47,7 +47,7 @@ export default function DishesList() {
     }
     
     async function getDishes() {
-        let dishesList = await axios.get('https://sleepy-crag-49787.herokuapp.com/dish').then( res => res.data)
+        let dishesList = await axios.get('https://api.tyteda.ru/dish').then( res => res.data)
         for (let dish of dishesList) {
             for (let item of dishes) {
                 if (dish.type === item.name) {

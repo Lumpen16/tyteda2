@@ -5,3 +5,11 @@
     border-radius: 8px;
     background-color: #fff;
 }
+
+@media (max-width: 768px) {
+    .breakfasts_container {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 80px;
+    }
+}

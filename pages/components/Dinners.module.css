@@ -4,3 +4,10 @@
     border-radius: 8px;
     background-color: #fff;
 }
+
+@media (max-width: 768px) {
+    .dinners_container {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}

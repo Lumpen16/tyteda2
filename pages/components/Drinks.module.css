@@ -4,3 +4,10 @@
     border-radius: 8px;
     background-color: #fff;
 }
+
+@media (max-width: 768px) {
+    .drinks_container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

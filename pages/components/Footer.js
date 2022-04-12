@@ -25,14 +25,14 @@ function Footer() {
             </div> */}
             <div className={ styles.footer_projects_container }>
                 <div className={ styles.footer_additional_container }>
-                    <div>
+                    <div className={ styles.footer_card }>
                         <p className={ styles.footer_additional_container_header }>ТутЕда.<br />Корпоративное<br />питание</p>
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} className={ styles.nav_anchor } onClick={ () => router.push('/')} href="#corp_out">О нас</a></p>
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} className={ styles.nav_anchor } onClick={ () => router.push('/')} href="#tarifs">Комплексные обеды</a></p>
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} className={ styles.nav_anchor } onClick={ () => router.push('/oplata')}>Форма оплаты</a></p>
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} href="https://tyteda.ru/politika-konfidentsialnosti/">Политика конфиденциальности</a></p>
                     </div>
-                    <div>
+                    <div className={ styles.footer_card }>
                         <p className={ styles.footer_additional_container_header }>Дополнительно</p>
                         {/* <p className={ styles.footer_additional_container_content }>Корпоративное питание</p> */}
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} href="https://catering.tyteda.ru/">Кейтеринг</a></p>
@@ -40,13 +40,13 @@ function Footer() {
                         <p className={ styles.footer_additional_container_content }><a style={{ textDecoration: "none", color: "#181725", cursor: 'pointer'}} href="https://tyteda.ru/">Доставка готовой еды</a></p>
                     </div>
                     
-                    <div>
+                    <div className={ styles.footer_card }>
                         <p className={ styles.footer_additional_container_header }>Контакты</p>
                         <p className={ styles.footer_additional_container_content }></p>
                         <p className={ styles.footer_additional_container_content }>8 (495) 139-66-11</p>
                         <p className={ styles.footer_additional_container_content }>corp-pitanie@tyteda.ru</p>
                     </div>
-                    <div>
+                    <div className={ styles.footer_card }>
                         <p>Москва<br />ул. Сталеваров 14к1</p>
                         <div className={ styles.footer_projects_imgs }>
                             <img></img>

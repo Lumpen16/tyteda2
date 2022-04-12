@@ -37,3 +37,16 @@
     font-size: 16px;
     font-family: Nickelodeon, sans-serif;
 }
+
+@media (max-width: 768px) {
+    .tarifs_container {
+        margin: 0;
+        border-radius: 0;
+        padding: 20px;
+    }
+    .tarifs_cards {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px !important;
+    }
+}

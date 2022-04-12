@@ -82,3 +82,39 @@
 .nav_anchor:hover {
     color: black;
 }
+
+
+@media (max-width: 768px) {
+
+    .nav {
+        grid-template-columns: .2fr 1fr 1fr;
+        width: 768px;
+        display: none;
+    }
+    
+    .nav_logo {
+        padding-left: 10px;
+        display: none;
+    }
+    .nav_item {
+        padding-right: 10px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding-left: 30px;
+        margin-top: 20px;
+    }
+    #nav_container  {
+        background: #fff;
+    }
+    .nav_client {
+        padding-left: 30px;
+    }
+    .nav_phone {
+        padding-left: 30px;
+    }
+    .nav_mob {
+        width: 100px;
+        height: 100px;
+        background: #fff
+    }
+}

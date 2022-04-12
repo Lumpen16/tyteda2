@@ -24,3 +24,9 @@
 .oplata_var {
     font-size: 24px;
 }
+
+@media (max-width: 767px) {
+    .oplata_container {
+        margin: 80px 0 0 0;
+    }
+}

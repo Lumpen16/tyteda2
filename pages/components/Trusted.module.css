@@ -43,3 +43,24 @@
     top: -225%;
     left: -30%;
 }
+
+#item1, #item2 {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .trusted_img {
+        display: none;
+    }
+    .trusted_container {
+        margin: 0;
+        padding-right: 0;
+    }
+    #item1 #item2 {
+        display: none;
+    }
+    .trusted_master_container {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

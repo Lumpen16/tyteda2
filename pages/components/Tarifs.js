@@ -130,7 +130,7 @@ function Tarifs() {
     ]
 
 
-    const dinner = <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
+    const dinner = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
     <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
@@ -177,7 +177,7 @@ function Tarifs() {
     
 </div>
 
-    const obed = <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
+    const obed = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
     <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
@@ -224,7 +224,7 @@ function Tarifs() {
     
 </div>
 
-    const zavtraki = <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
+    const zavtraki = <div className={ styles.tarifs_cards } style={{ display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '100px', marginTop: '40px'}}>
 
     <div style={{borderRadius: '12px', boxShadow: '0px 0px 80px rgba(181, 181, 181, 0.2)', padding: '16px 20px', cursor: 'pointer', background: 'linear-gradient(360deg, #F3AF7F -0.05%, rgba(250, 238, 140, 0.99) 98.57%)' }}>
         <h1 style={{ textAlign: 'center'}}>- Мини -</h1>
@@ -284,7 +284,8 @@ function Tarifs() {
                 <div className={ tab === 1 ? styles.tarifs_toggler_item_active : styles.tarifs_toggler_item } onClick={ () => setTab(1)}>Обед</div>
                 <div className={ tab === 2 ? styles.tarifs_toggler_item_active : styles.tarifs_toggler_item } onClick={ () => setTab(2)}>Ужин</div>
             </div>
-            { tab === 0 ? zavtraki : tab === 1 ? obed : dinner }
+            
+                { tab === 0 ? zavtraki : tab === 1 ? obed : dinner }
             <p>* Стоимость расчитывается в зависимости от количества сотрудников и адреса доставки </p>
         </div>
     )

@@ -44,3 +44,17 @@
     right: 10%;
     top: -20%;
 }
+
+@media (max-width: 768px) {
+    .breaktime_master_container {
+        margin-right: 0;
+        margin-left: 0;
+        
+    }
+    .breaktime_img {
+        display: none;
+    }
+    .breaktime_header3 {
+        width: 100%;
+    }
+}

@@ -57,3 +57,19 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 767px) {
+    .footer_additional_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer_card {
+        margin-left: 15px;
+    }
+    .footer_footer {
+        flex-direction: column;
+    }
+    .footer_footer > div {
+        margin-left: 15px;
+    }
+}

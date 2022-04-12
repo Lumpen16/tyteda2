@@ -20,3 +20,17 @@
 .reviews_header {
     text-align: center;
 }
+
+
+@media (max-width: 768px) {
+    .reviews_container {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 20px;
+    }
+    .reviews_card {
+        padding: 30px 75px 75px 75px;
+        font-size: 20px;
+        width: auto;
+    }
+}

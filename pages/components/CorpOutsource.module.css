@@ -33,3 +33,20 @@
 
 }
 
+@media (max-width: 768px) {
+    .corp_master_container {
+        border-radius: 0px;
+        margin: 0;
+        padding: 20px;
+    }
+    .corp_header {
+        font-size: 27px;
+    }
+    .corp_sub_container {
+        width: 100%;
+        margin: 0;
+    }
+    .corp_outflow {
+        display: none;
+    }
+}
